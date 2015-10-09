@@ -1,0 +1,92 @@
+/*
+Autor: Carlos Martin Carrasco
+Licencia : GPLv3
+
+Métodos públicos
+En vez de calcular la pendiente en el programa principal, vamos a ponerlo como
+un método de la clase y así lo reutilizaremos todas las veces que necesitemos.
+Añada un método para el cálculo de la pendiente y modificad el main para tener
+en cuenta este cambio.
+¿Añadimos pendiente como dato miembro de la recta? La respuesta es que
+no ¿Por qué?
+Añadir también los siguiente métodos:
+• Obtener la ordenada (2) dado un valor de abscisa 1, aplicando la fórmula:
+(-C -xA) / B
+• Obtener la abscisa (1) dado un valor de ordenada 2, aplicando la fórmula:
+(-C -yB) / A
+En la función main leed un valor de abscisa e imprimir la ordenada según la recta
+y leed un valor de ordenada e imprimid la abscisa que le corresponde. Hacedlo
+sólo con la primera recta.
+*/
+#include <iostream>
+
+using namespace std ;
+
+// Clase Recta
+class Recta {
+	public:
+		double A ;
+		double B ;
+		double C ;
+	
+	// Metodo calcular Pendiente //
+	double Pendiente () {
+		return -A/B ;
+	};
+
+	// Metodo Calcular Ordenada//
+	double Ordenada (int x) {
+	return (-C -x*A) / B ;
+	} ;
+
+	// Metodo Calcular Abcisa //
+	double Abcisa (int y) {
+	return (-C -y*B) / A ;
+	} ;
+};
+
+int main () {
+	Recta r1 ;
+	Recta r2 ;
+
+	double n1,n2,n3,n4,n5,n6,abcisa,ordenada;
+
+
+	cout << "Introduzca un numero real: " ;
+	cin >> n1 ;
+
+	cout << "Introduzca un numero real: " ;
+	cin >> n2 ;
+
+	cout << "Introduzca un numero real: " ;
+	cin >> n3 ;
+
+	cout << "Introduzca un numero real: " ;
+	cin >> n4 ;
+
+	cout << "Introduzca un numero real: " ;
+	cin >> n5 ;
+
+	cout << "Introduzca un numero real: " ;
+	cin >> n6 ;
+
+
+	r1.A = n1 ;
+	r1.B = n2 ;
+	r1.C = n3 ;
+	r2.A = n4 ;
+	r2.B = n5 ;
+	r2.C = n6 ;
+
+	cout << "Pendiente del primer objeto: " <<  r1.Pendiente() << endl ;
+	cout << "Pendiente del segundo objeto: " << r2.Pendiente() << endl ;	
+
+	cout << "\n\nIntroduzca abcisa: " ;
+	cin >> abcisa ;
+	cout << "Ordenada de Recta1: " << r1.Ordenada(abcisa) << endl ;
+	
+	cout << "Introduzca ordenada: " ;
+	cin >> ordenada ;
+	cout << "Abcisa de Recta1 : " << r1.Abcisa(ordenada) << endl ;
+}
+

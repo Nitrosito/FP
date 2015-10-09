@@ -1,0 +1,23 @@
+Metodos: Parametros Formales
+		Objetos de otra clase
+		  - Recta	Contienee	Pto
+		  - SecCar	Borrar		SecNº
+
+		Objetos de la misma clase
+		  - SecCar	Aniade	SecCar
+		  - Pto		Igual	Pto
+
+
+
+Metodos devolucion
+	Vector o Matriz clasica NOOOOOOO
+	Objetos de otra clase
+	  -Recta	Segmento			SegmentoDirigido
+	  -Sector	PosicionesMayusculas		SecNºos
+	  -SecCar	ToString			string
+
+
+Objeto de la misma clase
+	-SecCar		ToUpper		SecCar
+	-Recta		Perpendicular	Recta
+	-Fraccion	Suma		Fraccion
